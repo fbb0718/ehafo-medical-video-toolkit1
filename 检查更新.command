@@ -14,6 +14,28 @@ echo "   📦 检查更新中..."
 echo "=========================================="
 echo ""
 
+# 检查网络连接
+check_network() {
+    ping -c 1 -W 3 github.com > /dev/null 2>&1
+    return $?
+}
+
+# 尝试用不同方式获取更新
+try_fetch() {
+    local url=$1
+    echo "🔄 尝试连接: $url"
+    
+    # 移除可能已存在的 remote
+    git remote remove origin 2>/dev/null
+    
+    # 添加远程仓库
+    git remote add origin "$url"
+    
+    # 尝试获取
+    git fetch origin main --quiet 2>/dev/null
+    return $?
+}
+
 # 检查是否是 Git 仓库
 if [ ! -d ".git" ]; then
     echo "⚠️  检测到这是通过 ZIP 下载的版本"
@@ -24,30 +46,55 @@ if [ ! -d ".git" ]; then
     # 初始化 Git 仓库
     git init
     
-    # 添加远程仓库
-    git remote add origin https://github.com/fbb0718/ehafo-medical-video-toolkit1.git
+    # 尝试多个镜像源
+    echo "🌐 正在连接服务器..."
+    echo ""
     
-    # 获取远程最新文件
-    echo "⬇️  正在下载最新版本..."
-    git fetch origin main --quiet 2>/dev/null
+    # 定义镜像源列表
+    MIRRORS=(
+        "https://github.com/fbb0718/ehafo-medical-video-toolkit1.git"
+        "https://hub.fastgit.xyz/fbb0718/ehafo-medical-video-toolkit1.git"
+        "https://ghproxy.com/https://github.com/fbb0718/ehafo-medical-video-toolkit1.git"
+    )
     
-    if [ $? -eq 0 ]; then
+    SUCCESS=0
+    for mirror in "${MIRRORS[@]}"; do
+        if try_fetch "$mirror"; then
+            SUCCESS=1
+            echo ""
+            echo "✅ 连接成功！"
+            break
+        fi
+        echo "   ❌ 连接失败，尝试下一个..."
+        echo ""
+    done
+    
+    if [ $SUCCESS -eq 1 ]; then
         # 强制拉取最新版本（覆盖本地文件）
         git reset --hard origin/main
         
         echo ""
         echo "✅ 已更新到最新版本！"
         echo ""
-        echo "📌 当前版本日期: $(git log -1 --format=%cd --date=short)"
+        echo "📌 当前版本日期: $(git log -1 --format=%cd --date=short 2>/dev/null || echo '未知')"
         echo ""
         read -p "按任意键退出..."
         exit 0
     else
         echo ""
-        echo "❌ 网络连接失败，请检查网络后重试"
+        echo "=========================================="
+        echo "❌ 所有连接方式均失败"
+        echo "=========================================="
         echo ""
-        echo "💡 或手动前往 GitHub 下载最新 ZIP："
+        echo "💡 可能的原因："
+        echo "   1. 网络连接不稳定"
+        echo "   2. 需要代理才能访问 GitHub"
+        echo ""
+        echo "📥 请手动前往 GitHub 下载最新 ZIP："
         echo "   https://github.com/fbb0718/ehafo-medical-video-toolkit1"
+        echo ""
+        echo "🔧 或者使用以下命令克隆（如果网络正常）："
+        echo "   git clone https://github.com/fbb0718/ehafo-medical-video-toolkit1.git"
         echo ""
         read -p "按任意键退出..."
         exit 1
@@ -63,14 +110,26 @@ echo "📌 当前版本日期: $CURRENT_VERSION"
 echo ""
 echo "🔄 正在连接服务器..."
 
-REMOTE_INFO=$(git ls-remote origin HEAD 2>/dev/null)
-
-if [ $? -ne 0 ]; then
+# 检查网络
+if ! check_network; then
     echo ""
-    echo "❌ 网络连接失败，请检查网络后重试"
-    echo ""
-    read -p "按任意键退出..."
-    exit 1
+    echo "⚠️  网络似乎不稳定，尝试使用镜像源..."
+    
+    # 尝试用镜像源更新
+    git remote set-url origin https://hub.fastgit.xyz/fbb0718/ehafo-medical-video-toolkit1.git 2>/dev/null
+    REMOTE_INFO=$(git ls-remote origin HEAD 2>/dev/null)
+    
+    if [ $? -ne 0 ]; then
+        # 恢复原始地址
+        git remote set-url origin https://github.com/fbb0718/ehafo-medical-video-toolkit1.git 2>/dev/null
+        echo ""
+        echo "❌ 网络连接失败，请检查网络后重试"
+        echo ""
+        read -p "按任意键退出..."
+        exit 1
+    fi
+else
+    REMOTE_INFO=$(git ls-remote origin HEAD 2>/dev/null)
 fi
 
 REMOTE_HASH=$(echo "$REMOTE_INFO" | cut -f1)
