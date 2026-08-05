@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "voiceKey": "mcy",
+  "id": "ehafo-female-teacher-mcy-v1",
+  "nameZh": "本地克隆女老师 mcy",
+  "referenceAudio": "assets/voice/profiles/mcy/reference.wav",
+  "referenceText": "我们了解一下就可以了。那骨盆的组成包括了向后方的骶骨和尾骨，然后包括了两侧的髋骨。髋骨又包括了髂骨、坐骨，还有耻骨。所以呢，这个骨盆的组成我们仅作为一般的了解就没问题了。",
+  "model": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-bf16",
+  "language": "zh-CN",
+  "notes": "用户指定并授权使用的 mcy 本地克隆音色。"
+}

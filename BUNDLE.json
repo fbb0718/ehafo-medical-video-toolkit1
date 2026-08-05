@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 3,
+  "packageVersion": "5.3",
+  "bundleType": "ehafo-fast-medical-question-video-toolkit",
+  "createdAt": "2026-08-04T18:01:57+08:00",
+  "fastPipeline": "scripts/run_fast_question_project.py",
+  "highQualityPipeline": "scripts/run_question_project.py",
+  "automaticFocus": "scripts/auto_focus_cues.py",
+  "sampleQuestion": 5,
+  "renderer": "pillow-ffmpeg-fast-hq-aligned-v5.3.1",
+  "availableBackgrounds": [
+    "white",
+    "green"
+  ],
+  "defaultBackground": "white",
+  "sampleMeasuredSeconds": 33.59,
+  "greenSampleMeasuredSeconds": 108.682,
+  "underFiveMinutes": true,
+  "containsSampleAudio": true,
+  "containsSampleVideo": true,
+  "containsModelWeights": false,
+  "availableVoices": [
+    "yhn",
+    "mcy"
+  ],
+  "defaultVoice": "yhn",
+  "containsBothCloneReferences": true,
+  "containsBothReviewedFixedOutros": true,
+  "portablePlatform": "macOS 13+ (Apple Silicon or Intel for fast mode)",
+  "voiceGenerationPlatform": "Apple Silicon only",
+  "environmentCheck": "scripts/check_environment.py",
+  "transitionRegressionTest": "tests/test_fast_transitions.py"
+}

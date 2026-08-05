@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "voiceKey": "yhn",
+  "id": "ehafo-male-teacher-yhn-v1",
+  "nameZh": "本地克隆男老师 yhn",
+  "referenceAudio": "assets/voice/profiles/yhn/reference.wav",
+  "referenceText": "病从口入，A族乙型溶血性链球菌来了以后，它跑到扁桃体，反复地发炎。然后这些细菌产物、免疫复合物就跑到这儿，跑到二尖瓣上了。之后呢，看这二尖瓣，二尖瓣就像个门一样吧。",
+  "model": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-bf16",
+  "language": "zh-CN",
+  "notes": "用户指定并授权使用的 yhn 本地克隆音色。"
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "projectId": "clinical-assistant-q05-yhn",
+  "filePrefix": "clinical-assistant",
+  "questions": "5-5",
+  "variant": "yhn-v5.3",
+  "background": "white",
+  "presentation": {
+    "brandName": "易哈佛",
+    "courseName": "临床执业助理医师易错题讲解",
+    "midrollLabel": "易哈佛临床教研提醒",
+    "outroTitle": "关注易哈佛临床",
+    "outroText": "理解考点，比只记答案更重要",
+    "disclaimer": "医学考试题目解析 · 仅供备考学习，不作为诊疗或用药建议"
+  },
+  "voice": "yhn",
+  "voiceProfiles": {
+    "yhn": "assets/voice/profiles/yhn/profile.json",
+    "mcy": "assets/voice/profiles/mcy/profile.json"
+  },
+  "sharedOutros": {
+    "yhn": {
+      "id": "clinical-assistant-follow-yhn-v1",
+      "examName": "临床执业助理医师",
+      "voice": "yhn",
+      "text": "关注易哈佛。理解考点，比只记答案更重要。",
+      "audio": "assets/voice/shared/clinical-assistant-follow-v1/yhn固定片尾.wav"
+    },
+    "mcy": {
+      "id": "clinical-assistant-follow-mcy-v1",
+      "examName": "临床执业助理医师",
+      "voice": "mcy",
+      "text": "关注易哈佛。理解考点，比只记答案更重要。",
+      "audio": "assets/voice/shared/clinical-assistant-follow-v1/mcy固定片尾.wav"
+    }
+  },
+  "paths": {
+    "questionScripts": "data/questions.json",
+    "focusCues": "data/focus-cues.json",
+    "reviewedAudioRoot": "assets/voice/reviewed-smooth",
+    "reviewedAudioRoots": {
+      "yhn": "assets/voice/reviewed-smooth",
+      "mcy": "assets/voice/reviewed-mcy"
+    },
+    "generatedRoot": "generated/compositions",
+    "checkRoot": "checks"
+  }
+}

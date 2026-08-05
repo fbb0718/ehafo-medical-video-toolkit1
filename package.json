@@ -1,0 +1,21 @@
+{
+  "name": "ehafo-question-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.82 preview",
+    "check": "npx --yes hyperframes@0.7.82 check",
+    "render": "npx --yes hyperframes@0.7.82 render",
+    "publish": "npx --yes hyperframes@0.7.82 publish",
+    "extract": ".venv/bin/python scripts/extract_pdf.py",
+    "manifest": ".venv/bin/python scripts/build_manifest.py",
+    "manifest:sample": ".venv/bin/python scripts/build_manifest.py --question 1 --output data/q01-manifest.json",
+    "voice:sample": ".venv/bin/python scripts/synthesize_audio.py --manifest data/q01-manifest.json --group 1 --question 1",
+    "build:sample": ".venv/bin/python scripts/build_composition.py --manifest data/q01-manifest.json --group 1 --question 1",
+    "generate": ".venv/bin/python scripts/generate_all.py",
+    "test": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "dependencies": {
+    "gsap": "3.14.2"
+  }
+}

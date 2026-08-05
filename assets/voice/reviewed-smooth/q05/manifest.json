@@ -1,0 +1,221 @@
+{
+  "number": 5,
+  "model": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-bf16",
+  "voice": "本地克隆男老师 yhn",
+  "audio": "assets/voice/reviewed-smooth/q05/question-q05-voice.wav",
+  "duration": 117.426,
+  "captions": [
+    {
+      "index": 0,
+      "section": "封面",
+      "text": "易哈佛临床执业助理医师易错题讲解。第五题，肺通气量不能直接代入，比值计算前要先扣除无效腔。",
+      "start": 0.0,
+      "end": 7.61
+    },
+    {
+      "index": 1,
+      "section": "读题",
+      "text": "请看题干。先找无效腔和肺通气量，再找呼吸频率和心排血量，最后计算通气血流比值。",
+      "start": 8.16,
+      "end": 15.587
+    },
+    {
+      "index": 2,
+      "section": "审题",
+      "text": "这是一道两步计算题。先由肺通气量扣除无效腔通气量，得到肺泡通气量，再除以肺血流量。",
+      "start": 16.137,
+      "end": 22.437
+    },
+    {
+      "index": 3,
+      "section": "知识点",
+      "text": "通气血流比值的分子是每分钟肺泡通气量，分母是每分钟肺血流量。",
+      "start": 22.987,
+      "end": 29.047
+    },
+    {
+      "index": 4,
+      "section": "知识点",
+      "text": "由于无效腔内气体不参与肺泡与血液的气体交换，计算肺泡通气量时必须扣除无效腔通气量。",
+      "start": 29.597,
+      "end": 37.396
+    },
+    {
+      "index": 5,
+      "section": "知识点",
+      "text": "在本题考试情境中，肺血流量按心输出量计算，也就是题干给出的心排血量。",
+      "start": 37.946,
+      "end": 45.106
+    },
+    {
+      "index": 6,
+      "section": "品牌提醒",
+      "text": "易哈佛临床教研提醒：这类计算题先分清通气量的层级，再检查单位统一。不要直接套用正常参考值，要以题干数据为准。",
+      "start": 45.656,
+      "end": 54.985
+    },
+    {
+      "index": 7,
+      "section": "逐项解析",
+      "text": "A项的零点八是正常静息状态的近似参考值，不能直接套用。B项零点九低于本题计算值。",
+      "start": 55.535,
+      "end": 61.954
+    },
+    {
+      "index": 8,
+      "section": "逐项解析",
+      "text": "C项先留待完整推导核对。D项和E项都高于计算值，常见原因是把无效腔通气量误加进去了。",
+      "start": 62.504,
+      "end": 70.938
+    },
+    {
+      "index": 9,
+      "section": "答案推导",
+      "text": "第一步，无效腔通气量等于一百二十五乘以二十，结果是每分钟二千五百毫升。第二步，肺泡通气量等于七千五百减去二千五百，结果是每分钟五千毫升。第三步，五千除以五千，结果是一点零。",
+      "start": 71.488,
+      "end": 83.789
+    },
+    {
+      "index": 10,
+      "section": "公布答案",
+      "text": "现在公布答案。正确答案是C，通气血流比值为1.0。",
+      "start": 84.339,
+      "end": 90.399
+    },
+    {
+      "index": 11,
+      "section": "答案说明",
+      "text": "本题中肺泡通气量与肺血流量都是每分钟5000毫升，所以比值为1.0。关键是分子必须使用肺泡通气量，不能直接使用肺通气量。",
+      "start": 90.949,
+      "end": 101.302
+    },
+    {
+      "index": 12,
+      "section": "考点口诀",
+      "text": "最后记住四句话。第一句，总量先扣无效腔。第二句，频率相乘得肺泡。第三句，肺泡通气除血流。第四句，单位统一再计算。",
+      "start": 101.852,
+      "end": 112.126
+    },
+    {
+      "index": 13,
+      "section": "关注片尾",
+      "text": "关注易哈佛。理解考点，比只记答案更重要。",
+      "start": 112.576,
+      "end": 117.276
+    }
+  ],
+  "segments": [
+    {
+      "index": 0,
+      "section": "封面",
+      "text": "易哈佛临床执业助理医师易错题讲解。第五题，肺通气量不能直接代入，比值计算前要先扣除无效腔。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-00.wav",
+      "speechDuration": 7.61
+    },
+    {
+      "index": 1,
+      "section": "读题",
+      "text": "请看题干。先找无效腔和肺通气量，再找呼吸频率和心排血量，最后计算通气血流比值。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-01.wav",
+      "speechDuration": 7.427
+    },
+    {
+      "index": 2,
+      "section": "审题",
+      "text": "这是一道两步计算题。先由肺通气量扣除无效腔通气量，得到肺泡通气量，再除以肺血流量。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-02.wav",
+      "speechDuration": 6.3
+    },
+    {
+      "index": 3,
+      "section": "知识点",
+      "text": "通气血流比值的分子是每分钟肺泡通气量，分母是每分钟肺血流量。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-03.wav",
+      "speechDuration": 6.06
+    },
+    {
+      "index": 4,
+      "section": "知识点",
+      "text": "由于无效腔内气体不参与肺泡与血液的气体交换，计算肺泡通气量时必须扣除无效腔通气量。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-04.wav",
+      "speechDuration": 7.799
+    },
+    {
+      "index": 5,
+      "section": "知识点",
+      "text": "在本题考试情境中，肺血流量按心输出量计算，也就是题干给出的心排血量。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-05.wav",
+      "speechDuration": 7.16
+    },
+    {
+      "index": 6,
+      "section": "品牌提醒",
+      "text": "易哈佛临床教研提醒：这类计算题先分清通气量的层级，再检查单位统一。不要直接套用正常参考值，要以题干数据为准。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-06.wav",
+      "speechDuration": 9.329
+    },
+    {
+      "index": 7,
+      "section": "逐项解析",
+      "text": "A项的零点八是正常静息状态的近似参考值，不能直接套用。B项零点九低于本题计算值。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-07.wav",
+      "speechDuration": 6.419
+    },
+    {
+      "index": 8,
+      "section": "逐项解析",
+      "text": "C项先留待完整推导核对。D项和E项都高于计算值，常见原因是把无效腔通气量误加进去了。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-08.wav",
+      "speechDuration": 8.434
+    },
+    {
+      "index": 9,
+      "section": "答案推导",
+      "text": "第一步，无效腔通气量等于一百二十五乘以二十，结果是每分钟二千五百毫升。第二步，肺泡通气量等于七千五百减去二千五百，结果是每分钟五千毫升。第三步，五千除以五千，结果是一点零。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-09.wav",
+      "speechDuration": 12.3
+    },
+    {
+      "index": 10,
+      "section": "公布答案",
+      "text": "现在公布答案。正确答案是C，通气血流比值为1.0。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-10.wav",
+      "speechDuration": 6.06
+    },
+    {
+      "index": 11,
+      "section": "答案说明",
+      "text": "本题中肺泡通气量与肺血流量都是每分钟5000毫升，所以比值为1.0。关键是分子必须使用肺泡通气量，不能直接使用肺通气量。",
+      "pauseAfter": 0.55,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-11.wav",
+      "speechDuration": 10.354
+    },
+    {
+      "index": 12,
+      "section": "考点口诀",
+      "text": "最后记住四句话。第一句，总量先扣无效腔。第二句，频率相乘得肺泡。第三句，肺泡通气除血流。第四句，单位统一再计算。",
+      "pauseAfter": 0.45,
+      "audio": "assets/voice/reviewed-smooth/q05/segments/segment-12.wav",
+      "speechDuration": 10.274
+    },
+    {
+      "index": 13,
+      "section": "关注片尾",
+      "text": "关注易哈佛。理解考点，比只记答案更重要。",
+      "pauseAfter": 0.15,
+      "audio": "assets/voice/shared/clinical-assistant-follow-v1/yhn固定片尾.wav",
+      "speechDuration": 4.7
+    }
+  ]
+}

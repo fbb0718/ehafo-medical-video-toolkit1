@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "clinical-assistant-follow-v1",
+  "text": "关注易哈佛。理解考点，比只记答案更重要。",
+  "format": {
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1
+  },
+  "variants": [
+    {
+      "voice": "yhn",
+      "displayName": "本地克隆男老师 yhn",
+      "audio": "yhn固定片尾.wav",
+      "duration": 4.700083,
+      "sha256": "baf793353eef9d755a737651967d4457ad8bed2839344cefc312f50f079ab86b"
+    },
+    {
+      "voice": "mcy",
+      "displayName": "本地克隆女老师 mcy",
+      "audio": "mcy固定片尾.wav",
+      "duration": 4.330083,
+      "sha256": "b668619277fa0c0e5d4942f31da909e70fc443b2ef7bf42a0b591d86e443da39"
+    }
+  ]
+}

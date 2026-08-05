@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "questions": {
+    "5": {
+      "stem": [
+        {"phrase": "无效腔容量为125 ml", "caption": 1, "anchor": "无效腔", "row": 0},
+        {"phrase": "肺通气量为7500", "caption": 1, "anchor": "肺通气量", "row": 1, "mode": "highlight"},
+        {"phrase": "呼吸频率为20次", "caption": 1, "anchor": "呼吸频率", "row": 2},
+        {"phrase": "心排血量为5000", "caption": 1, "anchor": "心排血量", "row": 3, "mode": "highlight"}
+      ],
+      "knowledge": [
+        {"phrase": "肺泡通气量", "caption": 3, "anchor": "分子是每分钟肺泡通气量", "row": 0, "mode": "circle"},
+        {"phrase": "无效腔容量", "caption": 4, "anchor": "必须扣除无效腔通气量", "row": 1, "mode": "highlight"},
+        {"phrase": "心输出量", "caption": 5, "anchor": "肺血流量按心输出量计算", "row": 2, "mode": "circle"}
+      ],
+      "reminder": [
+        {"phrase": "分清通气量", "caption": 6, "anchor": "先分清通气量的层级"},
+        {"phrase": "单位统一", "caption": 6, "anchor": "检查单位统一", "mode": "circle"},
+        {"phrase": "以题干数据为准", "caption": 6, "anchor": "以题干数据为准", "mode": "highlight"}
+      ],
+      "analysis": [
+        {"phrase": "近似参考值", "caption": 7, "anchor": "近似参考值", "row": "A"},
+        {"phrase": "低于计算值", "caption": 7, "anchor": "低于本题计算值", "row": "B", "mode": "highlight"},
+        {"phrase": "高于计算值", "caption": 8, "anchor": "高于计算值", "row": "D"},
+        {"phrase": "不符合", "caption": 8, "anchor": "误加进去了", "row": "E", "mode": "highlight"}
+      ],
+      "answer": [
+        {"phrase": "通气/血流比值为1.0", "caption": 10, "anchor": "通气血流比值为1.0", "row": "C", "mode": "highlight"}
+      ],
+      "takeaway": [
+        {"phrase": "总量先扣无效腔", "caption": 12, "anchor": "总量先扣无效腔", "row": 0},
+        {"phrase": "频率相乘得肺泡", "caption": 12, "anchor": "频率相乘得肺泡", "row": 1},
+        {"phrase": "肺泡通气除血流", "caption": 12, "anchor": "肺泡通气除血流", "row": 2},
+        {"phrase": "单位统一再计算", "caption": 12, "anchor": "单位统一再计算", "row": 3}
+      ]
+    }
+  }
+}

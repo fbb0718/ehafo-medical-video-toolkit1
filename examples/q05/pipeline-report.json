@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "pipeline": "ehafo-fast-medical-video-hq-aligned-v5",
+  "scope": "structured content + reviewed audio -> final MP4",
+  "questions": "5-5",
+  "variant": "yhn-fast-hq-aligned-v5",
+  "focus": "generated/fast/focus-cues-yhn-fast-hq-aligned-v5.json",
+  "outputs": {
+    "q05": {
+      "video": "examples/q05/clinical-assistant-q05-white-yhn-fast-hq-aligned-v5-final.mp4",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "117.788667",
+          "size": "5979567"
+        }
+      },
+      "audioCheck": {
+        "video": "examples/q05/clinical-assistant-q05-white-yhn-fast-hq-aligned-v5-final.mp4",
+        "secondsChecked": 118,
+        "minRmsDbfs": -120.0,
+        "maxPeakDbfs": -4.22,
+        "silentRunsAtLeast2Seconds": [],
+        "decodePassed": true
+      }
+    }
+  },
+  "elapsedSeconds": 33.59,
+  "underFiveMinutes": true
+}
